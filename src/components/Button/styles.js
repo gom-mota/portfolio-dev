@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Button = styled.a.attrs(props => ({
-    color: props.background || props.theme.colors.gradient,
+    color: props.color || props.theme.colors.gradient,
     size: props.size || props.theme.sizes.buttonNormal
 }))`
     color: ${props => props.theme.colors.textItem};

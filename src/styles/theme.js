@@ -1,6 +1,8 @@
 const Default = {
     colors: {
-        background: 'linear-gradient(to bottom, #222222, #1f1f1f, #1c1c1c, #1a1a1a, #171717);',
+        background: "#171717",
+        backgroundGradient: 'linear-gradient(to bottom, #222222, #1f1f1f, #1c1c1c, #1a1a1a, #171717);',
+        card: "#191919",
         navMenuMobile: "#222222",
         primary: '#0095f9',
         textPrimary: '#e1e1e6',
@@ -22,12 +24,21 @@ const Default = {
     sizes: {
         textPrimary: '16px',
         textItem: '16px',
-        textTitle: '22px',
+        textTitle: '24px',
+        textSubTitle: '20px',
         buttonNormal: '6px 20px',
         buttonSmall: '2px 8px',
         buttonLarge: '10px 20px',
-        borderRadius: '20px'
+        borderRadius: '20px',
+        badgeNormal: '4px 16px 4px 16px',
+        cardNormal: {
+            width: '400px',
+            height: '540px'
+        }
     },
+    effects: {
+        shadow: '0 0 3em #00000082',
+    }
 }
 
 const White = {

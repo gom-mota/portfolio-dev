@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import { FaTimes, FaBars } from 'react-icons/fa';
 import { TextInputButton } from '../Input';
-import { ButtonPrimaryTextInput } from '../Button';
-import Link from 'next/link';
+
+import SimpleModal from '../Modal';
 
 import MenuItems from './menuItems';
 
@@ -18,7 +18,10 @@ import {
 const Navbar = () => {
 
     function sendURL() {
-        alert("Função não implementada!");
+        return (
+        alert("Ainda não implementado. Use a versão de desktop")
+        )
+        
       }
 
     const [buttonClicked, setButtonClicked] = useState(true);
@@ -66,11 +69,10 @@ const Navbar = () => {
             </NavMenu>
             
             <GitConnected>
-                <TextInputButton placeholder="URL da API Gitconnected" value={url} onChange={onChange}/>
-                <Link href={`?apiurl=${url}`}>
-                    <ButtonPrimaryTextInput> Carregar CV </ButtonPrimaryTextInput>
-                </Link>
+                <TextInputButton placeholder="URL da API Gitconnected" value={url} onChange={onChange} button="Carregar CV" link={`?apiurl=${url}`}/>
             </GitConnected>
+
+            
 
         </NavBar>
     );

@@ -1,4 +1,6 @@
-import { Input, InputButton } from './styles';
+import { Input, InputButton, Container } from './styles';
+import { ButtonPrimaryTextInput } from '../Button'
+import Link from 'next/link';
 
 const TextInput = (props) => {
 
@@ -10,7 +12,12 @@ const TextInput = (props) => {
 
  const TextInputButton = (props) => {
     return(
-        <InputButton placeholder={props.placeholder} onChange={props.onChange}/>
+        <Container>
+            <InputButton placeholder={props.placeholder} onChange={props.onChange} button={props.button} link={props.link}/>
+            <Link href={props.link}>
+                <ButtonPrimaryTextInput>{props.button}</ButtonPrimaryTextInput>
+            </Link>
+        </Container>
     );
  }
 

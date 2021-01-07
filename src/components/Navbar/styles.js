@@ -21,7 +21,8 @@ export const NavBar = styled.nav`
 export const Logo = styled.div`
   border-radius: 100%;
   background: ${props => props.theme.colors.primary};
-  padding: 10px;  
+  padding: 10px; 
+  box-shadow: ${props => props.theme.effects.shadow}; 
 
    h1 {
     font-size: 20px;
@@ -91,13 +92,13 @@ export const NavMenu = styled.ul`
       top: 80px;
       left: -100%;
       opacity: 1;
-      transition: all 0.5s ease;
+      //transition: all 0.5s ease;
 
     &.active {
-      background: ${props => props.theme.colors.background};
+      background: ${props => props.theme.colors.backgroundGradient};
       left: 0;
       opacity: 1;
-      transition: all 0.5s ease;
+      //transition: all 0.5s ease;
       z-index: 1;
     }
 

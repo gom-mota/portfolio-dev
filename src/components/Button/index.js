@@ -1,10 +1,9 @@
 import { Button, ButtonTextInput } from './styles';
-import Link from 'next/link';
 
 const ButtonPrimary = (props) => {
 
     return (
-        <Button size={props.size}>{props.children}</Button>
+        <Button size={props.size} onClick={props.onClick}>{props.children}</Button>
     )
 
 }
