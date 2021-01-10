@@ -13,6 +13,9 @@ const Default = {
         gradientInverted: `linear-gradient(to right, #0057ff, #0065fe, #0070fc, #007bf8, #0085f3, #008cf0, 
                     #0093eb, #0099e6, #009ee1, #00a2dc, #00a6d5, #00a9ce);`,
     },
+    effects: {
+        shadow: '0 0 3em #00000082',
+    },
     fonts: {
         primary: 'Poppins, sans-serif',
         light: 300,
@@ -35,9 +38,6 @@ const Default = {
             width: '400px',
             height: '540px'
         }
-    },
-    effects: {
-        shadow: '0 0 3em #00000082',
     }
 }
 

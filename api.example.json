@@ -1,0 +1,398 @@
+{
+    "basics": {
+      "name": "Richard Hendricks",
+      "label": "CEO @piedpiper",
+      "image": "https://avatars0.githubusercontent.com/u/58340587?v=4",
+      "email": "",
+      "phone": "",
+      "url": "http://www.piedpiper.com",
+      "summary": "CEO of Pied Piper and working on a decentralized internet for everyone - PiperNet. PiperNet is powered by your devices, protective of your privacy, and programmed for your freedom.\n\nToday’s web is an Internet of Kings, dominated by monopolies that crush innovation and promote surveillance capitalism. Discover for yourself why we need PiperNet, the Internet of People™.",
+      "location": {
+        
+      },
+      "profiles": [
+        {
+          "network": "gitconnected",
+          "username": "richard-hendricks-demo",
+          "url": "https://gitconnected.com/richard-hendricks-demo"
+        },
+        {
+          "network": "GitHub",
+          "username": "richard-hendricks-demo",
+          "url": "https://github.com/richard-hendricks-demo"
+        },
+        {
+          "network": "Twitter",
+          "url": "https://twitter.com/@piedpiper",
+          "username": "@piedpiper"
+        }
+      ],
+      "headline": "Building decentralized internet for everyone",
+      "blog": "https://levelup.gitconnected.com",
+      "yearsOfExperience": 10,
+      "username": "richard-hendricks-demo",
+      "locationAsString": "Silicon Valley, CA",
+      "region": "Silicon Valley, CA",
+      "karma": 26,
+      "id": "817c6e40-54a4-4212-890b-3bd5a1788f61",
+      "followers": 2,
+      "following": 0,
+      "picture": "https://avatars0.githubusercontent.com/u/58340587?v=4",
+      "website": "http://www.piedpiper.com"
+    },
+    "skills": [
+      {
+        "name": "C",
+        "level": "Expert",
+        "keywords": [
+          
+        ],
+        "rating": 5,
+        "yearsOfExperience": 11
+      },
+      {
+        "name": "Golang",
+        "level": "Intermediate",
+        "keywords": [
+          
+        ],
+        "rating": 3,
+        "yearsOfExperience": 5
+      },
+      {
+        "name": "Java",
+        "level": "Advanced",
+        "keywords": [
+          
+        ],
+        "rating": 4,
+        "yearsOfExperience": 9
+      },
+      {
+        "name": "TypeScript",
+        "level": "Advanced",
+        "keywords": [
+          
+        ],
+        "rating": 4,
+        "yearsOfExperience": 4
+      },
+      {
+        "name": "React",
+        "level": "Beginner",
+        "keywords": [
+          
+        ],
+        "rating": 2,
+        "yearsOfExperience": 2
+      }
+    ],
+    "projects": [
+      {
+        "name": "middle-out-compression",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "url": "http://www.hooli.xyz/",
+        "highlights": [
+          
+        ],
+        "keywords": [
+          
+        ],
+        "roles": [
+          
+        ],
+        "startDate": null,
+        "endDate": null,
+        "entity": "",
+        "type": "",
+        "displayName": "middle-out-compression",
+        "website": "http://www.hooli.xyz/",
+        "summary": "Making files smaller",
+        "primaryLanguage": "",
+        "languages": [
+          "Go",
+          "C++"
+        ],
+        "libraries": [
+          
+        ],
+        "githubUrl": "https://github.com/portfolio-api-demo/middle-out-compression",
+        "repositoryUrl": "https://github.com/portfolio-api-demo/middle-out-compression",
+        "images": [
+          {
+            "resolutions": {
+              "micro": {
+                "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-micro",
+                "size": 1228,
+                "width": 32,
+                "height": 22
+              },
+              "thumbnail": {
+                "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-thumbnail",
+                "size": 4326,
+                "width": 224,
+                "height": 155
+              },
+              "mobile": {
+                "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-mobile",
+                "size": 7821,
+                "width": 400,
+                "height": 277
+              },
+              "desktop": {
+                "url": "https://project-images.gitconnectedcontent.com/88a0a093-c7b7-4928-a6fc-b03d174995de-desktop",
+                "size": 7836,
+                "width": 400,
+                "height": 277
+              }
+            }
+          }
+        ],
+        "videos": [
+          {
+            "url": "https://www.youtube.com/watch?v=oGB_VPrld0U&list=PLTTC1K14KAxHj6AftnRUD28SQaoVauvl3",
+            "source": "youtube",
+            "sourceId": "oGB_VPrld0U"
+          }
+        ]
+      },
+      {
+        "name": "pied-piper-coin",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "url": "http://www.piedpiper.com/",
+        "highlights": [
+          
+        ],
+        "keywords": [
+          
+        ],
+        "roles": [
+          
+        ],
+        "startDate": null,
+        "endDate": null,
+        "entity": "",
+        "type": "",
+        "displayName": "pied-piper-coin",
+        "website": "http://www.piedpiper.com/",
+        "summary": "The currency of the open web",
+        "primaryLanguage": "",
+        "languages": [
+          "TypeScript",
+          "Go"
+        ],
+        "libraries": [
+          "Node.js",
+          "React"
+        ],
+        "githubUrl": "https://github.com/portfolio-api-demo/pied-piper-coin",
+        "repositoryUrl": "https://github.com/portfolio-api-demo/pied-piper-coin",
+        "images": [
+          {
+            "resolutions": {
+              "micro": {
+                "url": "https://project-images.gitconnectedcontent.com/d9c4429c-de9b-4678-9f32-577dfcf89a08-micro",
+                "size": 1337,
+                "width": 32,
+                "height": 25
+              },
+              "thumbnail": {
+                "url": "https://project-images.gitconnectedcontent.com/d9c4429c-de9b-4678-9f32-577dfcf89a08-thumbnail",
+                "size": 8197,
+                "width": 224,
+                "height": 176
+              },
+              "mobile": {
+                "url": "https://project-images.gitconnectedcontent.com/d9c4429c-de9b-4678-9f32-577dfcf89a08-mobile",
+                "size": 26404,
+                "width": 600,
+                "height": 470
+              },
+              "desktop": {
+                "url": "https://project-images.gitconnectedcontent.com/d9c4429c-de9b-4678-9f32-577dfcf89a08-desktop",
+                "size": 28130,
+                "width": 800,
+                "height": 627
+              }
+            }
+          }
+        ],
+        "videos": [
+          {
+            "url": "https://www.youtube.com/watch?v=4pWD2ug4kV8",
+            "source": "youtube",
+            "sourceId": "4pWD2ug4kV8"
+          }
+        ]
+      }
+    ],
+    "work": [
+      {
+        "name": "Hendricks Venture Capital",
+        "location": "San Francisco, CA",
+        "description": "",
+        "position": "Founding Partner",
+        "url": "https://gitconnected.com",
+        "startDate": "2020-01-01",
+        "endDate": "",
+        "summary": "We fund companies trying to change the world",
+        "highlights": [
+          
+        ],
+        "isCurrentRole": true,
+        "start": {
+          "year": 2020,
+          "month": 1
+        },
+        "end": {
+          
+        },
+        "company": "Hendricks Venture Capital",
+        "website": "https://gitconnected.com"
+      },
+      {
+        "name": "Pied Piper",
+        "location": "Silicon Valley, CA",
+        "description": "",
+        "position": "CEO",
+        "url": "http://www.piedpiper.com/",
+        "startDate": "2014-04-01",
+        "endDate": "2019-12-01",
+        "summary": "I am the CEO of PiedPiper and working on providing free and decentralized internet.",
+        "highlights": [
+          "Launched PiperNet, a decentralized internet for the world",
+          "Created PiedPiperCoin, a cryptocurrency to support the open internet",
+          "Discovered Middle-Out Compression which provides the highest standard for lossless compression"
+        ],
+        "isCurrentRole": false,
+        "start": {
+          "year": 2014,
+          "month": 4
+        },
+        "end": {
+          "year": 2019,
+          "month": 12
+        },
+        "company": "Pied Piper",
+        "website": "http://www.piedpiper.com/"
+      },
+      {
+        "name": "Aviato",
+        "location": "Fremont, CA",
+        "description": "",
+        "position": "Developer",
+        "url": "",
+        "startDate": "2014-03-01",
+        "endDate": "2014-03-01",
+        "summary": "I built the aggregation algorithm to track flights",
+        "highlights": [
+          
+        ],
+        "isCurrentRole": false,
+        "start": {
+          "year": 2014,
+          "month": 3
+        },
+        "end": {
+          "year": 2014,
+          "month": 3
+        },
+        "company": "Aviato",
+        "website": ""
+      }
+    ],
+    "publications": [
+      {
+        "name": "Pied Piper News",
+        "publisher": "Pied Piper",
+        "releaseDate": "2019-12-01",
+        "url": "http://www.piedpiper.com/company-news/",
+        "summary": "Keep up with our company news and see how we're creating a decentralized internet bring the power back to the people",
+        "fullReleaseDate": {
+          "year": 2019,
+          "month": 12,
+          "day": null
+        },
+        "website": "http://www.piedpiper.com/company-news/"
+      }
+    ],
+    "education": [
+      {
+        "institution": "Stanford",
+        "url": "",
+        "area": "Computer Science",
+        "studyType": "Bachelor's of Science",
+        "startDate": "2012-01-01",
+        "endDate": "2014-01-01",
+        "score": "4.0/4.0",
+        "courses": [
+          
+        ],
+        "description": "I studied computer science at Stanford",
+        "activities": "",
+        "start": {
+          "year": 2012,
+          "month": null
+        },
+        "end": {
+          "year": 2014,
+          "month": null
+        },
+        "website": "",
+        "gpa": "4.0/4.0"
+      }
+    ],
+    "volunteer": [
+      {
+        "organization": "Startup Founders",
+        "position": "Mentor",
+        "url": "http://hooli.com",
+        "startDate": "2014-04-01",
+        "endDate": "2019-12-01",
+        "summary": "Mentoring startup founders to help them launch and grow their companies.",
+        "highlights": [
+          
+        ],
+        "location": "San Francisco, CA",
+        "start": {
+          "year": 2014,
+          "month": 4
+        },
+        "end": {
+          "year": 2019,
+          "month": 12
+        },
+        "website": "http://hooli.com"
+      }
+    ],
+    "awards": [
+      {
+        "title": "Tethics Honorary Member",
+        "date": "2019-12-01",
+        "awarder": "Gavin Belson Foundation",
+        "summary": "It's tech and ethics - tethics",
+        "fullDate": {
+          "year": 2019,
+          "month": 12
+        }
+      }
+    ],
+    "languages": [
+      
+    ],
+    "interests": [
+      
+    ],
+    "references": [
+      
+    ],
+    "certificates": [
+      
+    ],
+    "meta": {
+      "note": "This is a combined version of the old and new JSON Resume API to provide maximum compatibility. You will notice duplicated values in different fields.",
+      "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+      "version": "v1.0.0",
+      "lastModified": "2020-12-29T15:53:00"
+    }
+  }

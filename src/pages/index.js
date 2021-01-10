@@ -31,6 +31,9 @@ import {
 
 const Home = ({router}) => {
 
+  // Informe o link de sua API
+  const linkAPI="https://gitconnected.com/v1/portfolio/gom-mota";
+
   function validateAPI(url){
     const pattern = new RegExp("(https{0,1}:\/\/w{0,3}gitconnected.com\/v1\/portfolio\/.*)");
     if (pattern.test(url)==true){
@@ -68,7 +71,7 @@ const Home = ({router}) => {
       })
     }
     else{
-      fetch('https://gitconnected.com/v1/portfolio/gom-mota')
+      fetch(linkAPI)
             .then(res => res.json())
             .then(user => {
               setUser(user);
