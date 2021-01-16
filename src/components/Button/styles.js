@@ -16,4 +16,18 @@ export const ButtonTextInput = styled(Button)`
     border-radius: 0 ${props => props.theme.sizes.borderRadius} 
                 ${props => props.theme.sizes.borderRadius} 0;
     width: 141px;
+
+    i{
+        display: none;
+    }
+    
+    @media screen and (max-width: 1170px) {
+        width: 60px;
+        p{
+            display: none;
+        }
+        i{
+            display: block;
+        }
+    }
 `;

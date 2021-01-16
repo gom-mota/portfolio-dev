@@ -1,12 +1,13 @@
 const Default = {
     colors: {
-        background: "#171717",
+        background: "#1b1b1b",
         backgroundGradient: 'linear-gradient(to bottom, #222222, #1f1f1f, #1c1c1c, #1a1a1a, #171717);',
-        card: "#191919",
+        card: "#1b1b1b",
         navMenuMobile: "#222222",
         primary: '#0095f9',
         textPrimary: '#e1e1e6',
         inputBackground: '#333333',
+        separatorItem: '#2f2f2f',
         textItem: "#ffffff",
         gradient: `linear-gradient(to right, #00a9ce, #00a6d5, #00a2dc, #009ee1, #0099e6, #0093eb, 
                     #008cf0, #0085f3, #007bf8, #0070fc, #0065fe, #0057ff);`,
@@ -35,8 +36,12 @@ const Default = {
         borderRadius: '20px',
         badgeNormal: '4px 16px 4px 16px',
         cardNormal: {
-            width: '400px',
-            height: '540px'
+            'max-width': '400px',
+            'min-height': '540px'
+        },
+        cardBig: {
+            'max-width': '460px',
+            'min-height': '540px'
         }
     }
 }

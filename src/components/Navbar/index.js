@@ -36,8 +36,7 @@ const Navbar = () => {
         setUrl(e.target.value)
     }
 
-    return (
-        <NavBar className={buttonClicked ? 'active' : ''}>
+    return (        <NavBar className={buttonClicked ? 'active' : ''}>
 
             <Logo>
                 <h1>GM</h1>
@@ -50,10 +49,10 @@ const Navbar = () => {
             </Title>
             
             <MenuIcon onClick={handleClick}>
-                {buttonClicked ? <FaTimes /> : <FaBars />}
+                {buttonClicked ?  <FaBars /> : <FaTimes />}
             </MenuIcon>
 
-            <NavMenu className={buttonClicked ? 'active' : ''}>
+            <NavMenu className={buttonClicked ? '' : 'active'}>
             {MenuItems.map((item, index) => {
                 return(
                     <li key={index}>

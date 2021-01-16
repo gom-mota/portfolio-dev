@@ -12,4 +12,7 @@ export const Item = styled.p.attrs(props => ({
                 padding-box, ${props => props.border};
         box-shadow: ${props => props.theme.effects.shadow}; 
         height: fit-content;
+        
+        
+        
 `;

@@ -9,6 +9,11 @@ export const Main = styled.div.attrs(props => ({
     background: ${props => props.color};
     box-shadow: ${props => props.theme.effects.shadow};   
     border-radius: ${props => props.theme.sizes.borderRadius};
+
+    @media screen and (min-width: 1920px) {
+        ${props => props.theme.sizes.cardBig}; 
+    }
+
     
 
     img{
@@ -16,6 +21,9 @@ export const Main = styled.div.attrs(props => ({
         height: 225px;
         border-top-left-radius: ${props => props.theme.sizes.borderRadius};
         border-top-right-radius: ${props => props.theme.sizes.borderRadius}; 
+
+        
+
     }
     h1{
         margin-top: 16px;
@@ -27,6 +35,8 @@ export const Main = styled.div.attrs(props => ({
         font-size: 14px;
         color: ${props => props.theme.colors.textPrimary};
     }
+    
+    
 `;
 
 export const Container = styled.div`
@@ -39,6 +49,7 @@ export const Container = styled.div`
 export const Description = styled.p`
         padding: 20px 20px 0 20px;
         text-align: center;
+        
 `;
 
 export const Languages = styled.div`
@@ -49,4 +60,5 @@ export const Languages = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 22px;
+    margin-bottom: 28px;
 `;

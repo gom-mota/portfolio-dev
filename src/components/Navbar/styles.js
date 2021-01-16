@@ -82,6 +82,10 @@ export const NavMenu = styled.ul`
       display: none;
     }
   }
+  @media screen and (max-width: 1100px) {
+    a{
+      margin: 0;
+    }
 
     @media screen and (max-width: 960px) {
       display: flex;
@@ -136,6 +140,7 @@ export const NavMenu = styled.ul`
         }
       }
     }
+  }
 `;
 
 

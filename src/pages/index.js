@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import { withRouter } from 'next/router';
 import Badge from '../components/Badge';
 import Card from '../components/Card';
+import ScrollArrow from '../components/ScrollArrow';
 
 import { FaGithub,
   FaLinkedin,
@@ -10,7 +11,8 @@ import { FaGithub,
   FaEnvelope,
   FaPhoneAlt,
   FaUnlink,
-  FaInfinity
+  FaInfinity,
+  FaArrowCircleUp
 } from 'react-icons/fa';
 
 import {
@@ -46,6 +48,7 @@ const Home = ({router}) => {
     
   }
 
+  // User data
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -79,6 +82,7 @@ const Home = ({router}) => {
     }
   }, [router.query.apiurl]);
 
+  // User project data image
   function getUrlImg(index){
     var url="https://maestroselectronics.com/wp-content/uploads/2017/12/No_Image_Available.jpg";
     user.projects[index].images.map((image) => {
@@ -87,6 +91,7 @@ const Home = ({router}) => {
     return url;
 }
 
+  // User's networks data icon
   function selectIcon(network){
     switch(network){
       case 'gitconnected':
@@ -108,6 +113,7 @@ const Home = ({router}) => {
 
   return (
     <Main>
+      <ScrollArrow/>
       <Navbar />
       <Container>
         <Profile>
@@ -139,7 +145,7 @@ const Home = ({router}) => {
             </ProfileDetails>
         </Profile>
         <About>
-          <Title>Sobre mim</Title>
+          <Title id="about">Sobre mim</Title>
           <p>{user.basics.summary}</p>
         </About>
         <Skills>
@@ -151,7 +157,7 @@ const Home = ({router}) => {
           </div>
         </Skills>
         <Projects>
-          <Title>Projetos</Title>
+          <Title id="projects">Projetos</Title>
           <ProjectCards>
             {user.projects.map((project, i) => (
               <Card img={getUrlImg(i)}
@@ -164,7 +170,7 @@ const Home = ({router}) => {
           </ProjectCards>
         </Projects>
         <Experiences>
-              <Title>Experiência</Title>
+              <Title id="experiences">Experiências</Title>
               {user.work.map((work, i) => (
                 <ExperienceItem>
                   <div>
@@ -184,7 +190,7 @@ const Home = ({router}) => {
         </Experiences>
         </Container>
         <Footer>
-          <p>&copy; Gabriel Mota 2020</p>
+          <div>Criado por <a href="https://github.com/gom-mota/">Gabriel Mota</a>.</div>
         </Footer>
     </Main>
   );

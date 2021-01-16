@@ -5,11 +5,15 @@ const MenuItems = [
     },
     {
         title: 'Sobre',
-        url: '#',
+        url: '#about',
     },
     {
         title: 'Projetos',
-        url: '#',
+        url: '#projects',
+    },
+    {
+        title: 'Experiências',
+        url: '#experiences',
     },
     {
         title: 'Carregar CV',

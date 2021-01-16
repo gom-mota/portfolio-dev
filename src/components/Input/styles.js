@@ -20,8 +20,13 @@ export const Input = styled.input.attrs(props => ({
 `;
 
   export const InputButton = styled(Input)`
+
     border-radius: ${props => props.theme.sizes.borderRadius}  0 0 
                   ${props => props.theme.sizes.borderRadius};
     width: 286px;
+    
+    @media screen and (max-width: 1170px) {
+      width: 210px;
+    }
 `;
   
