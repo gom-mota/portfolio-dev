@@ -4,10 +4,13 @@ import { Default, White } from '../styles/theme';
 
 function MyApp({ Component, pageProps }) {
     return (
-        <ThemeProvider theme={Default}>
+        <>
+        <title>Gabriel Mota - PortfolioDEV</title>
+        <ThemeProvider theme={Default}>            
             <Component { ...pageProps } />
             <GlobalStyle />
         </ThemeProvider>
+        </>
     )
 }
 
