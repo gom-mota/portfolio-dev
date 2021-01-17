@@ -11,8 +11,7 @@ import { FaGithub,
   FaEnvelope,
   FaPhoneAlt,
   FaUnlink,
-  FaInfinity,
-  FaArrowCircleUp
+  FaInfinity
 } from 'react-icons/fa';
 
 import {
@@ -37,13 +36,14 @@ const Home = ({router}) => {
   const linkAPI="https://gitconnected.com/v1/portfolio/gom-mota";
 
   function validateAPI(url){
-    const pattern = new RegExp("(https{0,1}:\/\/w{0,3}gitconnected.com\/v1\/portfolio\/.*)");
+    const regex = /^(?:https?:\/\/)?(w{3}gitconnected.com\/v1\/portfolio\/.*\.)?[\w_-]+((\.\w{2,}){1,2})(\/([\w\._-]+\/?)*(\?[\w_-]+=[^\?\/&]*(\&[\w_-]+=[^\?\/&]*)*)?)?$/gm;
+    const pattern = new RegExp(regex);
     if (pattern.test(url)==true){
         return true;
     }
     else{
       alert("Insira um link válido da API Gitconnected!");
-        return false;
+      return false;
     }
     
   }
@@ -61,7 +61,7 @@ const Home = ({router}) => {
 
         try {
           const data = JSON.parse(text);
-            if(data.statusCode==500){
+            if(data.hasOwnProperty("statusCode")){
               alert("Usuário não encontrado no Gitconnected!");
             }else{
               setUser(data);
@@ -95,7 +95,7 @@ const Home = ({router}) => {
   function selectIcon(network){
     switch(network){
       case 'gitconnected':
-        return <FaInfinity/>
+        return <FaInfinity />
       case 'GitHub':
         return <FaGithub />
       case 'LinkedIn':

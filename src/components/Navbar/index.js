@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import { FaTimes, FaBars } from 'react-icons/fa';
-import { TextInputButton } from '../Input';
+import { TextInputButton, TextInput } from '../Input';
 
-import SimpleModal from '../Modal';
+import { SimpleModal, AlertModal} from '../Modal';
+import { ButtonPrimary } from '../Button';
 
 import MenuItems from './menuItems';
 
@@ -17,12 +18,7 @@ import {
 
 const Navbar = () => {
 
-    function sendURL() {
-        return (
-        alert("Ainda não implementado. Use a versão de desktop")
-        )
-        
-      }
+    const [isModalVisible, setIsModalVisible] = useState(false);
 
     const [buttonClicked, setButtonClicked] = useState(true);
 
@@ -36,7 +32,9 @@ const Navbar = () => {
         setUrl(e.target.value)
     }
 
-    return (        <NavBar className={buttonClicked ? 'active' : ''}>
+    return (
+        
+        <NavBar className={buttonClicked ? 'active' : ''}>
 
             <Logo>
                 <h1>GM</h1>
@@ -58,7 +56,7 @@ const Navbar = () => {
                     <li key={index}>
                         {
                         item.cName=="mobile"?
-                        <a className={item.cName} onClick={sendURL}>{item.title}</a>
+                        <a className={item.cName} onClick={()=> setIsModalVisible(true)}>{item.title}</a>
                         :
                         <a className={item.cName} href={item.url}>{item.title}</a>
                 }
@@ -66,9 +64,25 @@ const Navbar = () => {
                 )
             })}
             </NavMenu>
+
+            {isModalVisible? (
+                <SimpleModal onClose={()=> setIsModalVisible(false)}>
+                    <div>
+                        <div className="item">
+                            <h1>Insira o link de sua API Gitconnected</h1>
+                        </div>
+                        <div className="item">
+                            <TextInput placeholder="URL da API Gitconnected" size="70%" align="center" value={url} onChange={onChange} link={`?apiurl=${url}`}/>
+                        </div>
+                        <div className="item">
+                            <ButtonPrimary link={`?apiurl=${url}`} onClick={()=>{setIsModalVisible(false); setButtonClicked(true)}}>Carregar CV</ButtonPrimary>
+                        </div>
+                    </div>
+                </SimpleModal>
+            ) : null}
             
             <GitConnected>
-                <TextInputButton placeholder="URL da API Gitconnected" value={url} onChange={onChange} button="Carregar CV" link={`?apiurl=${url}`}/>
+                <TextInputButton placeholder="URL da API Gitconnected" size="286px" value={url} onChange={onChange} button="Carregar CV" link={`?apiurl=${url}`}/>
             </GitConnected>
 
             

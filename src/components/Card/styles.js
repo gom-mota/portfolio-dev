@@ -61,4 +61,5 @@ export const Languages = styled.div`
     justify-content: center;
     margin-top: 22px;
     margin-bottom: 28px;
+    width: 95%;
 `;

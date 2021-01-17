@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 const TextInput = (props) => {
 
-    return(
-        <Input placeholder={props.placeholder} />
+    return(        
+        <Input placeholder={props.placeholder} size={props.size} align={props.align} onChange={props.onChange}/>
     );
 
  }
@@ -13,7 +13,7 @@ const TextInput = (props) => {
  const TextInputButton = (props) => {
     return(
         <Container>
-            <InputButton placeholder={props.placeholder} onChange={props.onChange} button={props.button} link={props.link}/>
+            <InputButton placeholder={props.placeholder} size={props.size} align={props.align} onChange={props.onChange} button={props.button} link={props.link}/>
             <Link href={props.link}>
                 <ButtonPrimaryTextInput>{props.button}</ButtonPrimaryTextInput>
             </Link>

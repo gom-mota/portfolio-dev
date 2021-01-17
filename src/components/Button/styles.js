@@ -6,7 +6,7 @@ export const Button = styled.a.attrs(props => ({
 }))`
     color: ${props => props.theme.colors.textItem};
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: ${props => props.theme.sizes.borderRadius};
     padding: ${props => props.size};
     background:  ${props => props.color};
     font-weight: ${props => props.theme.fonts.medium};

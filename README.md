@@ -68,10 +68,12 @@ O Gitconnected é um site criado com o objetivo de fornecer uma plataforma para 
 No momento de criação do perfil no site, eles fornecem um link ûnico com sua API para que seja possível requisitar as informações em outra aplicação.
 
 Exemplo:
+
 <img src="src/assets/images/getapiurl_screenshot.png" width="680"/>
 
 
 Dados e seções suportados pelo perfil do Gitconnected:
+
 <img src="src/assets/images/datasupported_screenshot.png" width="680">
 
 - Note que no projeto não será listado todas as seções. irá ter apenas as que estão vísiveis nas <a href="#capturas-de-tela">capturas de tela</a>.
@@ -156,7 +158,7 @@ $ cd portfolio-dev
 # Instale as dependências
 $ npm install
 
-# Iniciar a projeto em modo de desenvolvimento
+# Iniciar o projeto em modo de desenvolvimento
 $ npm run dev
 
 # irá abrir uma página no navegador
