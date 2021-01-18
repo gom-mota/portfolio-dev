@@ -1,5 +1,6 @@
-import { Main, Container, Description, Languages } from './styles';
+import { Main, Container, Description, Tecnologies } from './styles';
 import Badge from '../Badge';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const Card = (props) => {
     return (
@@ -7,14 +8,17 @@ const Card = (props) => {
                 <img src={props.img} />
                 <Container>
                     <h1>{props.name}</h1>
-                    <a href={props.url}>{props.url}</a>
+                    <a href={props.url}>Ver detalhes <i><FaExternalLinkAlt/></i></a>
                     <Description>{props.description}</Description>
-                    <h1>Linguagens</h1>
-                    <Languages>
+                    <h1>{props.subtitle}</h1>
+                    <Tecnologies>
                     {props.languages.map((language) => {
                         return <Badge>{language}</Badge>
                     })}
-                    </Languages>
+                     {props.libraries.map((librarie) => {
+                        return <Badge>{librarie}</Badge>
+                    })}
+                    </Tecnologies>
                 </Container>            
         </Main>
     )

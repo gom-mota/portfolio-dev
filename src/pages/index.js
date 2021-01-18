@@ -164,7 +164,9 @@ const Home = ({router}) => {
                     name={project.name}
                     url={project.url}
                     description={project.description}
+                    subtitle="Tecnologias"
                     languages={project.languages}
+                    libraries={project.libraries}
               />
             ))}
           </ProjectCards>

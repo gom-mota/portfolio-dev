@@ -20,10 +20,16 @@ const Navbar = () => {
 
     const [isModalVisible, setIsModalVisible] = useState(false);
 
-    const [buttonClicked, setButtonClicked] = useState(true);
+    const [menuButtonClicked, setMenuButtonClicked] = useState(false);
+    const [menuItemClicked, setMenuItemClicked] = useState(false);
 
-    function handleClick() {
-        setButtonClicked(!buttonClicked);
+    function menuHandleClick() {
+        setMenuButtonClicked(!menuButtonClicked);
+    }
+
+    function itemHandleClick() {
+        setMenuItemClicked(!menuItemClicked);
+        setMenuButtonClicked(false);
     }
 
     const [url, setUrl] = useState('');
@@ -34,7 +40,7 @@ const Navbar = () => {
 
     return (
         
-        <NavBar className={buttonClicked ? 'active' : ''}>
+        <NavBar className={menuButtonClicked ? 'active' : ''}>
 
             <Logo>
                 <h1>GM</h1>
@@ -46,11 +52,11 @@ const Navbar = () => {
                 </a>
             </Title>
             
-            <MenuIcon onClick={handleClick}>
-                {buttonClicked ?  <FaBars /> : <FaTimes />}
+            <MenuIcon onClick={menuHandleClick}>
+                {menuButtonClicked ?  <FaTimes/> : <FaBars />}
             </MenuIcon>
 
-            <NavMenu className={buttonClicked ? '' : 'active'}>
+            <NavMenu className={menuButtonClicked ? 'active' : ''}>
             {MenuItems.map((item, index) => {
                 return(
                     <li key={index}>
@@ -58,7 +64,7 @@ const Navbar = () => {
                         item.cName=="mobile"?
                         <a className={item.cName} onClick={()=> setIsModalVisible(true)}>{item.title}</a>
                         :
-                        <a className={item.cName} href={item.url}>{item.title}</a>
+                        <a className={item.cName} href={item.url} onClick={()=> itemHandleClick()}>{item.title}</a>
                 }
                     </li>
                 )
@@ -75,7 +81,7 @@ const Navbar = () => {
                             <TextInput placeholder="URL da API Gitconnected" size="70%" align="center" value={url} onChange={onChange} link={`?apiurl=${url}`}/>
                         </div>
                         <div className="item">
-                            <ButtonPrimary link={`?apiurl=${url}`} onClick={()=>{setIsModalVisible(false); setButtonClicked(true)}}>Carregar CV</ButtonPrimary>
+                            <ButtonPrimary link={`?apiurl=${url}`} onClick={()=>{setIsModalVisible(false); setMenuButtonClicked(false)}}>Carregar CV</ButtonPrimary>
                         </div>
                     </div>
                 </SimpleModal>

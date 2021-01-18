@@ -50,7 +50,7 @@ export const Profile = styled.div`
     box-shadow: ${props => props.theme.effects.shadow}; 
 
     @media screen and (max-width: 960px) {
-        margin: 30px 0 50px 0;
+        margin: 30px 0 40px 0;
         width: 70%;
         height: 70%;
         max-width: 420px;
@@ -207,6 +207,12 @@ export const Experiences = styled.div`
         margin-bottom: 10px
     }
 
+    @media screen and (max-width: 760px){
+        li{
+            margin-left: 20px;
+            line-height: 32px;
+        }
+    }
 
 `;
 

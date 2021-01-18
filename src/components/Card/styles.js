@@ -28,12 +28,16 @@ export const Main = styled.div.attrs(props => ({
     h1{
         margin-top: 16px;
         font-size: ${props => props.theme.sizes.textSubTitle};
-        //font-weight: ${props => props.theme.fonts.regular};
+        text-transform: capitalize;
     }
     a{
         text-decoration: underline;
-        font-size: 14px;
+        font-size: 15px;
         color: ${props => props.theme.colors.textPrimary};
+        i{
+            margin-left: 2px;
+            font-size: 12px;
+        }
     }
     
     
@@ -52,7 +56,7 @@ export const Description = styled.p`
         
 `;
 
-export const Languages = styled.div`
+export const Tecnologies = styled.div`
     display: flex;
     flex-direction: row;
     grid-gap: 20px;
