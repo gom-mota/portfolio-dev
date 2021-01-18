@@ -17,7 +17,7 @@ export const Main = styled.div`
     
     
     .container {
-        background-color: #2f2f2f;
+        background-color: #222222;
         width: 85%;
         max-width: 500px;
         height: 275px;
@@ -48,30 +48,13 @@ export const Main = styled.div`
             background-color: transparent;
             border: none;
             outline: none;
-            width: 32px;
-            height: 32px;
-            right: calc(-100% + 35px);
+            font-size: 1.4rem;
+            right: calc(-100% + 40px);
             top: 16px;
             cursor: pointer;
             display: flex;
             position: relative;
             align-items: center;
-            
-            &:before,
-            &:after {
-                content: ' ';
-                position: absolute;
-                width: 2.5px;
-                height: 24px;
-                background-color: ${props => props.theme.colors.textItem};
-            }
-            &:before {
-                transform: rotate(45deg);
-            }
-            &:after {
-                transform: rotate(-45deg);
-            }
-        
         }
     }
 }

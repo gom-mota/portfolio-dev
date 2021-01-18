@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { FaTimes, FaBars } from 'react-icons/fa';
 import { TextInputButton, TextInput } from '../Input';
 
-import { SimpleModal, AlertModal} from '../Modal';
+import SimpleModal from '../Modal';
 import { ButtonPrimary } from '../Button';
 
 import MenuItems from './menuItems';
@@ -13,10 +13,15 @@ import {
     NavMenu,
     MenuIcon,
     Title,
-    GitConnected
+    GitConnected,
+    Main
 } from './styles';
 
-const Navbar = () => {
+const Navbar = ({ id='navbar' }) => {
+
+    const handleOutsideClick = (e) => {
+        if (e.target.id === id) setMenuButtonClicked(false);
+      }
 
     const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -39,7 +44,8 @@ const Navbar = () => {
     }
 
     return (
-        
+        <Main>
+        <div id={id} className={menuButtonClicked ? 'layer' : ''} onClick={handleOutsideClick}>
         <NavBar className={menuButtonClicked ? 'active' : ''}>
 
             <Logo>
@@ -94,6 +100,8 @@ const Navbar = () => {
             
 
         </NavBar>
+        </div>
+        </Main>
     );
   };
   

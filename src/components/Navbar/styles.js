@@ -1,5 +1,18 @@
 import styled from 'styled-components';
 
+export const Main = styled.div`
+
+    .layer {
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      background-color: #000000cf;
+    }
+`;
+
 export const NavBar = styled.nav`
   height: 80px;
   display: flex;
@@ -7,7 +20,9 @@ export const NavBar = styled.nav`
   align-items: center;
   padding: 40px;
   margin-top: 20px;
-  
+  background: ${props => props.theme.colors.navMenuMobile};
+
+
   @media screen and (max-width: 960px) { 
     position: relative;
     margin:0;
@@ -96,13 +111,11 @@ export const NavMenu = styled.ul`
       top: 80px;
       left: -100%;
       opacity: 1;
-      //transition: all 0.5s ease;
 
     &.active {
       background: ${props => props.theme.colors.backgroundGradient};
       left: 0;
       opacity: 1;
-      //transition: all 0.5s ease;
       z-index: 1;
     }
 
