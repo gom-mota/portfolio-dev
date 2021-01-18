@@ -91,6 +91,10 @@ export const ProfileDetails = styled.div`
     @media screen and (max-width: 960px) {
         align-items: center;
         width: 100%;
+
+        p {
+            text-align: center;
+        }
     }
 `;
 

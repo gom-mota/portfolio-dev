@@ -11,7 +11,20 @@ import { FaGithub,
   FaEnvelope,
   FaPhoneAlt,
   FaUnlink,
-  FaInfinity
+  FaInfinity,
+  FaStackOverflow,
+  FaYoutube,
+  FaMedium,
+  FaReddit,
+  FaHackerrank,
+  FaChartLine,
+  FaFacebook,
+  FaAngellist,
+  FaQuora,
+  FaBehance,
+  FaDribbble,
+  FaTwitch,
+  FaVimeo
 } from 'react-icons/fa';
 
 import {
@@ -102,6 +115,32 @@ const Home = ({router}) => {
         return <FaLinkedin />
       case 'Twitter':
         return <FaTwitter />
+      case 'Stack Overflow':
+        return <FaStackOverflow />
+      case 'Youtube':
+        return <FaYoutube />
+      case 'Medium':
+        return <FaMedium />
+      case 'Reddit':
+        return <FaReddit />
+      case 'HackerRank':
+        return <FaHackerrank />
+      case 'Topcoder':
+        return <FaChartLine />
+      case 'Facebook':
+        return <FaFacebook />
+      case 'AngelList':
+        return <FaAngellist />
+      case 'Quora':
+        return <FaQuora />
+      case 'Behance':
+        return <FaBehance />
+      case 'Dribbble':
+        return <FaDribbble />
+      case 'Twitch':
+        return <FaTwitch />
+      case 'Vimeo':
+        return <FaVimeo />
       default: 
         return <FaUnlink />;
     }
