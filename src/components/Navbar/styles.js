@@ -20,7 +20,6 @@ export const NavBar = styled.nav`
   align-items: center;
   padding: 40px;
   margin-top: 20px;
-  background: ${props => props.theme.colors.navMenuMobile};
 
 
   @media screen and (max-width: 960px) { 
@@ -28,20 +27,20 @@ export const NavBar = styled.nav`
     margin:0;
 
     &.active {
-      background: ${props => props.theme.colors.navMenuMobile};
+      background: ${props => props.theme.colors.backgroundItem};
     }
   }
 `;
 
 export const Logo = styled.div`
   border-radius: 100%;
-  background: ${props => props.theme.colors.primary};
+  background: ${props => props.theme.colors.accent.gradientInverted};
   padding: 10px; 
   box-shadow: ${props => props.theme.effects.shadow}; 
 
    h1 {
     font-size: 20px;
-    color: ${props => props.theme.colors.textItem};
+    color: ${props => props.theme.colors.textButton};
    }
 
   @media screen and (max-width: 960px) {  
@@ -55,7 +54,7 @@ export const Title = styled.div`
   a {
     text-decoration: none;
     font-size:22px;
-    color: ${props => props.theme.colors.textItem};
+    color: ${props => props.theme.colors.textPrimary};
     cursor: pointer;
     font-weight: ${props => props.theme.fonts.light};
     display: flex;
@@ -82,7 +81,7 @@ export const NavMenu = styled.ul`
   justify-content: end;
 
   a {
-    color: ${props => props.theme.colors.textItem};
+    color: ${props => props.theme.colors.textPrimary};
     text-decoration: none;
     margin: 0.5rem 1rem;
     font-family: ${props => props.theme.fonts.primary};
@@ -90,7 +89,7 @@ export const NavMenu = styled.ul`
 
     &:hover {
       transition: all 0.2s ease-out;
-      opacity: 70%;
+      opacity: 60%;
     }
 
     &.mobile {
@@ -113,7 +112,7 @@ export const NavMenu = styled.ul`
       opacity: 1;
 
     &.active {
-      background: ${props => props.theme.colors.backgroundGradient};
+      background: ${props => props.theme.colors.background};
       left: 0;
       opacity: 1;
       z-index: 1;
@@ -142,7 +141,7 @@ export const NavMenu = styled.ul`
           border-radius: ${props => props.theme.sizes.borderRadius};
           width: 50%;
           font-weight: ${props => props.theme.fonts.medium};
-          background: ${props => props.theme.colors.gradient};
+          background: ${props => props.theme.colors.accent.gradient};
           text-decoration: none;
           color: ${props => props.theme.colors.textButton};
           font-size: ${props => props.theme.sizes.textPrimary};
@@ -160,7 +159,7 @@ export const NavMenu = styled.ul`
 
 export const MenuIcon = styled.div`
   display: none;
-  color: ${props => props.theme.colors.textItem};
+  color: ${props => props.theme.colors.textPrimary};
 
   @media screen and (max-width: 960px) {
     display: block;

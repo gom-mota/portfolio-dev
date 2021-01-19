@@ -217,7 +217,7 @@ const Home = ({router}) => {
                   <div>
                     <h1>{work.name}</h1>
                     <p>
-                      {work.position} <span className="location">{work.location}</span>
+                      {work.position}<span className="location">- {work.location}</span>
                     </p>
                     <p className="summary">{work.summary}</p>
                     <ul>

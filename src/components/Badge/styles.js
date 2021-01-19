@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Item = styled.p.attrs(props => ({
-    color: props.color || props.theme.colors.background,
+    color: props.color || props.theme.colors.backgroundItem,
     size: props.size || props.theme.sizes.badgeNormal,
-    border: props.border || props.theme.colors.gradient,
+    border: props.border || props.theme.colors.accent.gradient,
 }))`
         padding:  ${props => props.size};
         border-radius: ${props => props.theme.sizes.borderRadius};

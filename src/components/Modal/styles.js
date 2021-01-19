@@ -13,11 +13,11 @@ export const Main = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    color: ${props => props.theme.colors.textItem};
+    color: ${props => props.theme.colors.textPrimary};
     
     
     .container {
-        background-color: #222222;
+        background-color: ${props => props.theme.colors.backgroundItem};;
         width: 85%;
         max-width: 500px;
         height: 275px;

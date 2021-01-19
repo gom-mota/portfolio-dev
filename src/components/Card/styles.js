@@ -2,16 +2,17 @@ import styled from 'styled-components';
 
 
 export const Main = styled.div.attrs(props => ({
-    color: props.color || props.theme.colors.background,
+    color: props.color || props.theme.colors.backgroundItem,
     size: props.size || props.theme.sizes.cardNormal,
 }))`
     ${props => props.size};
+    min-width: 80%;
     background: ${props => props.color};
     box-shadow: ${props => props.theme.effects.shadow};   
     border-radius: ${props => props.theme.sizes.borderRadius};
 
-    @media screen and (min-width: 1920px) {
-        ${props => props.theme.sizes.cardBig}; 
+    @media screen and (max-width: 760px) {
+        min-width: 0; 
     }
 
     
@@ -34,6 +35,10 @@ export const Main = styled.div.attrs(props => ({
         text-decoration: underline;
         font-size: 15px;
         color: ${props => props.theme.colors.textPrimary};
+
+        &:hover{
+            opacity: 60%;
+        }
         i{
             margin-left: 2px;
             font-size: 12px;

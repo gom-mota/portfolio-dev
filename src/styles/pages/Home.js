@@ -40,12 +40,12 @@ export const Profile = styled.div`
   
   img{
     border-radius: 100%;
-    background: ${props => props.theme.colors.gradient};
+    background: ${props => props.theme.colors.accent.gradientInverted};
     width: 420px;
     height: 420px; 
     margin-right: 60px;
     border: 16px solid;
-    border-image-source: ${props => props.theme.colors.gradient};
+    border-image-source: ${props => props.theme.colors.accent.gradientInverted};
     border-image-slice: 1;
     box-shadow: ${props => props.theme.effects.shadow}; 
 
@@ -70,7 +70,7 @@ export const ProfileDetails = styled.div`
     h1{
         margin-bottom: 10px;
         font-size: clamp(2.7em, 1em + 2.2vw, 3.6em);
-        background: ${props => props.theme.colors.gradient};
+        background: ${props => props.theme.colors.accent.gradient};
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-family: ${props => props.theme.fonts.primary};
@@ -107,7 +107,7 @@ export const Networks = styled.div`
     justify-content: center;
 
     a{
-        color: ${props => props.theme.colors.textItem};
+        color: ${props => props.theme.colors.textPrimary};
     }
     @media screen and (max-width: 960px) {
         display: flex;
@@ -156,15 +156,23 @@ export const ProjectCards = styled.div`
     grid-gap: 20px;
     justify-content: flex-start;
 
+    @media screen and (min-width: 1460px) {
+        grid-gap: 40px;
+    }
+
     @media screen and (max-width: 1240px) {
         display: grid;
         grid-template-columns: repeat(2,auto);
-        grid-gap: 20px;
+        grid-gap: 40px;
         justify-content: center;
         
         
     }
+    @media screen and (max-width: 960px){
+        grid-gap: 20px;
+    }
     @media screen and (max-width: 760px){
+        grid-gap: 40px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -197,13 +205,12 @@ export const Experiences = styled.div`
         display: inline-block;
         position: absolute;
         left: -1.2em;
-        //opacity: 0.6;
-        color: ${props => props.theme.colors.primary};
+        color: ${props => props.theme.colors.accent.basic};
     }
 
     .location{
         margin-left: 10px;
-        opacity: 0.6;
+        opacity: 60%;
     }
 
     .summary{
@@ -222,9 +229,19 @@ export const Experiences = styled.div`
 
 export const ExperienceItem = styled.div`
 
-border-bottom: 1px solid ${props => props.theme.colors.separatorItem};
 margin-bottom: 20px;
      
+&:after{
+    content: "";    
+    width: 100%;
+    height: 1px;
+    opacity: 12%;
+    background-color: ${props => props.theme.colors.textPrimary};
+    position: relative;
+    display: block;
+    top: 10px;
+    box-shadow: ${props => props.theme.effects.shadow};
+}
      
      h1{
         font-size: ${props => props.theme.sizes.textSubTitle};
@@ -246,6 +263,14 @@ export const Footer = styled.div`
     min-height: 120px;
     
     a{
-        color: ${props => props.theme.colors.textItem};
+        color: ${props => props.theme.colors.textPrimary};
+
+        &:hover{
+            opacity: 60%;
+        }
+
+        &:visited{
+            color: ${props => props.theme.colors.textPrimary};
+        }
     }
 `;

@@ -7,8 +7,7 @@ export const Container = styled.div`
         bottom: 20px;
         z-index: 1000;
         cursor: pointer;
-        animation: fadeIn 0.3s;
-        transition: opacity 0.4s;
+        opacity: 60%;
     }
 
     .scrollTop:hover{

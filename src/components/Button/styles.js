@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Button = styled.a.attrs(props => ({
-    color: props.color || props.theme.colors.gradient,
+    color: props.color || props.theme.colors.accent.gradient,
     size: props.size || props.theme.sizes.buttonNormal
 }))`
-    color: ${props => props.theme.colors.textItem};
+    color: ${props => props.theme.colors.textButton};
     cursor: pointer;
     border-radius: ${props => props.theme.sizes.borderRadius};
     padding: ${props => props.size};

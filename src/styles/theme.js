@@ -1,53 +1,75 @@
-const Default = {
-    colors: {
-        background: "#1b1b1b",
-        backgroundGradient: 'linear-gradient(to bottom, #222222, #1f1f1f, #1c1c1c, #1a1a1a, #171717);',
-        card: "#1b1b1b",
-        navMenuMobile: "#222222",
-        primary: '#0095f9',
-        textPrimary: '#e1e1e6',
-        inputBackground: '#333333',
-        separatorItem: '#2f2f2f',
-        textItem: "#ffffff",
-        gradient: `linear-gradient(to right, #00a9ce, #00a6d5, #00a2dc, #009ee1, #0099e6, #0093eb, 
-                    #008cf0, #0085f3, #007bf8, #0070fc, #0065fe, #0057ff);`,
-        gradientInverted: `linear-gradient(to right, #0057ff, #0065fe, #0070fc, #007bf8, #0085f3, #008cf0, 
-                    #0093eb, #0099e6, #009ee1, #00a2dc, #00a6d5, #00a9ce);`,
+const fonts = {
+    primary: 'Poppins, sans-serif',
+    light: 300,
+    regular: 400,
+    medium: 500,
+    bold: 700,
+    extraBold: 800,
+}
+const sizes = {
+    textPrimary: '16px',
+    textTitle: '24px',
+    textSubTitle: '20px',
+    buttonNormal: '6px 20px',
+    buttonSmall: '2px 8px',
+    buttonLarge: '10px 20px',
+    borderRadius: '20px',
+    badgeNormal: '4px 16px 4px 16px',
+    cardNormal: {
+        'max-width': '400px',
+        'min-height': '540px'
     },
-    effects: {
-        shadow: '0 0 3em #00000082',
-    },
-    fonts: {
-        primary: 'Poppins, sans-serif',
-        light: 300,
-        regular: 400,
-        medium: 500,
-        bold: 700,
-        extraBold: 800,
-    },
-    sizes: {
-        textPrimary: '16px',
-        textItem: '16px',
-        textTitle: '24px',
-        textSubTitle: '20px',
-        buttonNormal: '6px 20px',
-        buttonSmall: '2px 8px',
-        buttonLarge: '10px 20px',
-        borderRadius: '20px',
-        badgeNormal: '4px 16px 4px 16px',
-        cardNormal: {
-            'max-width': '400px',
-            'min-height': '540px'
-        },
-        cardBig: {
-            'max-width': '460px',
-            'min-height': '540px'
-        }
+    cardBig: {
+        'max-width': '460px',
+        'min-height': '540px'
     }
 }
-
-const White = {
-   
+const accent_blue = {
+    basic: '#0095f9',
+    gradient: `linear-gradient(to right, #00a9ce, #00a6d5, #00a2dc, #009ee1, #0099e6, #0093eb, 
+                #008cf0, #0085f3, #007bf8, #0070fc, #0065fe, #0057ff);`,
+    gradientInverted: `linear-gradient(to left, #00a9ce, #00a6d5, #00a2dc, #009ee1, #0099e6, #0093eb, 
+                    #008cf0, #0085f3, #007bf8, #0070fc, #0065fe, #0057ff);`,
 }
 
-export {Default, White}
+const accent_orange = {
+    basic: '#ff8d30',
+    gradient: `linear-gradient(to right, #f2a800, #ed9e03, #e89407, #e28b0b, #dc810e, #db7b13,
+                #da7517, #d86f1b, #db6a22, #de6528, #e1602f, #e35b35);`,
+    gradientInverted: `linear-gradient(to left, #f2a800, #ed9e03, #e89407, #e28b0b, #dc810e, #db7b13,
+                #da7517, #d86f1b, #db6a22, #de6528, #e1602f, #e35b35);`
+}
+
+const DarkTheme = {  
+    fonts: fonts,
+    sizes: sizes,  
+    colors: {
+        accent: accent_blue,
+        background: `linear-gradient(to bottom, #222222, #1e1e1e, #1a1a1a,
+                    #161616, #121212);`,
+        backgroundItem: "#222222",
+        textPrimary: '#e4e4e4',
+        textButton: '#ffffff'
+    },
+    effects: {
+        shadow: '6px 6px 0.8em #00000082',
+    }    
+}
+
+const LightTheme = {
+    fonts: fonts,
+    sizes: sizes,
+    colors: {
+        accent: accent_blue,        
+        background: `linear-gradient(to bottom, #ffffff, #f3f3f3, #e8e8e8,
+                    #dcdcdc, #d1d1d1);`,
+        backgroundItem: "#ffffff",
+        textPrimary: '#222222',
+        textButton: '#ffffff'
+    },
+    effects: {
+        shadow: '6px 6px 0.8em #0000003b',
+    }    
+}
+
+export {DarkTheme, LightTheme}
