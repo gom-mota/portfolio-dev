@@ -43,6 +43,8 @@ const Navbar = ({ id='navbar' }) => {
         setUrl(e.target.value)
     }
 
+    menuButtonClicked ? document.body.style.overflow = 'hidden' :  document.body.style.overflow = 'unset';
+
     return (
         <Main>
         <div id={id} className={menuButtonClicked ? 'layer' : ''} onClick={handleOutsideClick}>

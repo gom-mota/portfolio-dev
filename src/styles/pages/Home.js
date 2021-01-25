@@ -37,6 +37,7 @@ export const Profile = styled.div`
         flex-direction: column;
         margin:0;
     }
+
   
   img{
     border-radius: 100%;
@@ -51,13 +52,19 @@ export const Profile = styled.div`
 
     @media screen and (max-width: 960px) {
         margin: 30px 0 40px 0;
-        width: 70%;
-        height: 70%;
-        max-width: 420px;
-        max-height: 420px;
         
+        @media screen and (max-width: 520px) {
+            width: 340px;
+            height: 340px;
+        }
     }
   }
+`;
+
+export const ProfileImage = styled.div`
+    position: relative;
+    display: flex;
+    justify-content: center;
 `;
 
 export const ProfileDetails = styled.div`
@@ -126,6 +133,9 @@ export const About = styled.div`
 
     @media screen and (max-width: 960px) {
         margin-top: 60px;
+        p{
+            text-align: center;
+        }
     }
 
 `;

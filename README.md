@@ -9,7 +9,7 @@
   <a href="https://facebook.github.io/react">
     <img src="https://img.shields.io/static/v1?label=react&message=framework&color=00dbf8&style=for-the-badge&logo=REACT"/>
   </a>
-  <img src="https://img.shields.io/static/v1?label=status&message=EM%20DESENVOLVIMENTO&color=yellow&style=for-the-badge"/>
+ 
   <img src="https://img.shields.io/github/repo-size/gom-mota/portfolio-dev?color=lightgrey&label=TAMANHO&style=for-the-badge"/>
 </p>
 
@@ -54,10 +54,15 @@ Para que seja possível adicionar/remover informações de forma simples, sem te
     <img src="https://img.shields.io/static/v1?label=FIGMA&message=PROTOTIPAGEM&color=yellow&style=for-the-badge&logo=FIGMA"/>
   </a>
 </p>
+<details>
+  <summary>Light Mode (Clique para mostrar/esconder)</summary>
+  <p align='center'>  
+    <img src='src/assets/images/light_screenshot.png' width="840"/>
+  </p>
+</details>
+
 <p align='center'>  
-  <img src='src/assets/images/home_screenshot.png' width="840"/>
-  <img src='src/assets/images/about_screenshot.png'width="840"/>
-  <img src='src/assets/images/experience_screenshot.png' width="840"/>
+  <img src='src/assets/images/dark_screenshot.png' width="840"/>
 </p>
 
 ## Gitconnected
@@ -82,58 +87,96 @@ Dados e seções suportados pelo perfil do Gitconnected:
 
 Para que o site apresente suas informações, mude o valor da variável em "**src/pages/index.js**".
 ```javascript
-// Informe o link de sua API
+// Informe o link de sua API.
 const linkAPI="https://gitconnected.com/v1/portfolio/gom-mota";
 ```
 
 - Na raiz do projeto encontra-se um exemplo da API em formato JSON. "**api.example.json**".
 
 ## Personalização
-Caso queira personalizar as cores, fontes, efeitos, tamanho dos itens e ate mesmo criar uma nova variação de tema do site, voce pode ir até o arquivo "**src/styles/theme.js**" e fazer a alteração de acordo com seu gosto.
+
+### Seções:
+Para adicionar mais "seções" dos dados do gitconnected ao projeto, voce pode verificar os parâmetros no arquivo "**api.example.json**" e utilizar a função map para percorrer o objeto.
 
 Exemplo:
 ```javascript
-// Tema principal 
-const Default = {
-  colors: {
-    background: "#171717",
-    backgroundGradient: 'linear-gradient(to bottom, #222222, #1f1f1f, #1c1c1c, #1a1a1a, #171717);',
-    card: "#191919",
-    navMenuMobile: "#222222",
-    primary: '#0095f9',
-    textPrimary: '#e1e1e6',
-    inputBackground: '#333333',
-    textItem: "#ffffff",
+// variavel "user" armazena os dados de sua API.
+
+// listar todas as habilidades de seu perfil.
+user.skills.map((skill, i) => (
+              <Badge>{skill.name}</Badge>
+            ))
+```
+* Caso o parâmetro tenha apenas um valor ele pode ser acessado diretamente. Exemplo: `{user.basics.name}` para mostrar seu nome.
+
+
+### Tema:
+Caso queira personalizar as cores, fontes, efeitos, tamanho dos itens e ate mesmo criar uma nova variação de tema do site, voce pode ir até o arquivo "**src/styles/theme.js**" e fazer as alterações de acordo com seu gosto.
+
+Exemplo:
+```javascript
+const accent_blue = {
+    basic: '#0095f9',
     gradient: `linear-gradient(to right, #00a9ce, #00a6d5, #00a2dc, #009ee1, #0099e6, #0093eb, 
                 #008cf0, #0085f3, #007bf8, #0070fc, #0065fe, #0057ff);`,
-    gradientInverted: `linear-gradient(to right, #0057ff, #0065fe, #0070fc, #007bf8, #0085f3, #008cf0, 
-                #0093eb, #0099e6, #009ee1, #00a2dc, #00a6d5, #00a9ce);`,
-  },
-  effects: {
-    shadow: '0 0 3em #00000082',
-  }
+    gradientInverted: `linear-gradient(to left, #00a9ce, #00a6d5, #00a2dc, #009ee1, #0099e6, #0093eb, 
+                    #008cf0, #0085f3, #007bf8, #0070fc, #0065fe, #0057ff);`,
 }
 
-const SeuTema = {
-
+const DarkTheme = {  
+    fonts: fonts,
+    sizes: sizes,  
+    colors: {
+        accent: accent_blue,
+        background: `linear-gradient(to bottom, #222222, #1e1e1e, #1a1a1a,
+                    #161616, #121212);`,
+        backgroundItem: "#222222",
+        textPrimary: '#e4e4e4',
+        textButton: '#ffffff'
+    },
+    effects: {
+        shadow: '6px 6px 0.8em #00000082',
+    }    
 }
 
-export {Default, SeuTema}
+const OutroTema = { }
+
+export {DarkTheme, OutroTema};
 ```
 
-Se optar por criar outro tema, ao invés de modificar o principal, voce deve realizar a alteração no arquivo "**src/pages/_app.js**" com o nome do novo tema.
+Se optar por criar outro tema, ao invés de modificar os existentes, voce deve realizar a alteração no arquivo "**src/contexts/themeContext.js**" com o nome do novo tema.
+
 ```javascript
-function MyApp({ Component, pageProps }) {
-    return (
-        <ThemeProvider theme={SeuTema}>
-            <Component { ...pageProps } />
-            <GlobalStyle />
-        </ThemeProvider>
-    )
-}
+import { OutroTema } from '../styles/theme';
+
+return (
+    <ThemeModeContext.Provider value={{theme, setTheme, toggleTheme}}>
+      <ThemeProvider theme={OutroTema}>
+        {props.children}
+      </ThemeProvider>
+    </ThemeModeContext.Provider>
+  )
+```
+
+* Note que fazendo a alteração conforme citado acima, voce perderá o recurso de alterar dinâmicamente o tema através do botão. Para que esse recurso seja aplicado mantenha o valor do ThemeProvider `theme = {themeMode}`.
+```javascript 
+import { DarkTheme, LightTheme } from '../styles/theme';
+
+// Variável que armazena o tema dinâmico.
+const themeMode = theme === 'dark' ? DarkTheme : LightTheme;
+```
+
+Se quiser ter apenas um tema no site, remova o botão de alternância.
+
+Vá ate o arquivo **"src/pages/index.js"** e apague as linhas que contém os códigos abaixo:
+```javascript
+import { ToggleThemeMode } from '../components/Toggle';
+
+<ToggleThemeMode theme={theme} toggleTheme={toggleTheme} />
 ```
 
 ## Tecnologias
+* [Nodejs](https://nodejs.org/en/)
 * [Nextjs](https://nextjs.org/https://nextjs.org/)
 * [React](https://facebook.github.io/react/)
 * [Javascript](https://www.javascript.com/)
@@ -149,19 +192,19 @@ Clique no item para saber mais sobre o processo de instalação.
 
 ## Executar o projeto
 ```bash
-# Clone este repositório
+# Clone este repositório.
 $ git clone https://github.com/gom-mota/portfolio-dev.git
 
-# Acesse a pasta do projeto no terminal/cmd
+# Acesse a pasta do projeto no terminal/cmd.
 $ cd portfolio-dev
 
-# Instale as dependências
+# Instale as dependências.
 $ npm install
 
-# Iniciar o projeto em modo de desenvolvimento
+# Iniciar o projeto em modo de desenvolvimento.
 $ npm run dev
 
-# irá abrir uma página no navegador
+# irá abrir uma página no navegador.
 ```
 
 ## Deploy
@@ -169,4 +212,5 @@ Após realizar as modificações necessárias nos arquivos do projeto voce pode 
 
 Exemplo: https://devportfolio-virid.vercel.app/
 
+---
 <p align='center'>Criado por <a href="https://gommota.com">Gabriel Mota</a>.</p>

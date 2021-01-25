@@ -4,6 +4,8 @@ import { withRouter } from 'next/router';
 import Badge from '../components/Badge';
 import Card from '../components/Card';
 import ScrollArrow from '../components/ScrollArrow';
+import { useThemeMode } from '../contexts/themeContext';
+import { ToggleThemeMode } from '../components/Toggle';
 
 import { FaGithub,
   FaLinkedin,
@@ -32,6 +34,7 @@ import {
   Container,
   Profile,
   ProfileDetails,
+  ProfileImage,
   Networks,
   About,
   Skills,
@@ -146,6 +149,8 @@ const Home = ({router}) => {
     }
   }
 
+  const { theme, toggleTheme } = useThemeMode();
+
   if (!user) {
     return <div />;
   }
@@ -155,8 +160,12 @@ const Home = ({router}) => {
       <ScrollArrow/>
       <Navbar />
       <Container>
+      
         <Profile>
-          <img src={user.basics.picture} />
+          <ProfileImage>
+            <ToggleThemeMode theme={theme} toggleTheme={toggleTheme} />
+            <img src={user.basics.picture}/>
+          </ProfileImage>
             <ProfileDetails>
               <Title>{user.basics.name}</Title>
               <p>{user.basics.label}</p>
@@ -188,7 +197,7 @@ const Home = ({router}) => {
           <p>{user.basics.summary}</p>
         </About>
         <Skills>
-          <Title>Habilidades</Title>
+          <Title>Conhecimentos</Title>
           <div>
             {user.skills.map((skill, i) => (
               <Badge>{skill.name}</Badge>
