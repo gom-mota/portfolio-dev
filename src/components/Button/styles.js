@@ -1,32 +1,36 @@
 import styled from "styled-components";
 
-export const Button = styled.a.attrs(props => ({
+export const Button = styled.a.attrs((props) => ({
     color: props.color || props.theme.colors.accent.gradient,
-    size: props.size || props.theme.sizes.buttonNormal
+    size: props.size || props.theme.sizes.buttonNormal,
 }))`
-    color: ${props => props.theme.colors.textButton};
+    color: ${(props) => props.theme.colors.textButton};
     cursor: pointer;
-    border-radius: ${props => props.theme.sizes.borderRadius};
-    padding: ${props => props.size};
-    background:  ${props => props.color};
-    font-weight: ${props => props.theme.fonts.medium};
+    border-radius: ${(props) => props.theme.sizes.borderRadius};
+    padding: ${(props) => props.size};
+    background: ${(props) => props.color};
+    font-weight: ${(props) => props.theme.fonts.medium};
+
+    a {
+        text-decoration: none;
+        color: ${(props) => props.theme.colors.textButton};
+    }
 `;
 
 export const ButtonTextInput = styled(Button)`
-    border-radius: 0 ${props => props.theme.sizes.borderRadius} 
-                ${props => props.theme.sizes.borderRadius} 0;
-    width: 141px;
+    border-radius: 0 ${(props) => props.theme.sizes.borderRadius}
+        ${(props) => props.theme.sizes.borderRadius} 0;
 
-    i{
+    i {
         display: none;
     }
-    
+
     @media screen and (max-width: 1170px) {
         width: 60px;
-        p{
+        p {
             display: none;
         }
-        i{
+        i {
             display: block;
         }
     }

@@ -1,24 +1,36 @@
-import { Input, InputButton, Container } from './styles';
-import { ButtonPrimaryTextInput } from '../Button'
-import Link from 'next/link';
+import { Input, InputButton, Container } from "./styles";
+import { ButtonPrimaryTextInput } from "../Button";
+import Link from "next/link";
 
 const TextInput = (props) => {
-
-    return(        
-        <Input placeholder={props.placeholder} size={props.size} align={props.align} onChange={props.onChange}/>
+    return (
+        <Input
+            name={props.name}
+            placeholder={props.placeholder}
+            size={props.size}
+            align={props.align}
+            onChange={props.onChange}
+        />
     );
+};
 
- }
-
- const TextInputButton = (props) => {
-    return(
+const TextInputButton = (props) => {
+    return (
         <Container>
-            <InputButton placeholder={props.placeholder} size={props.size} align={props.align} onChange={props.onChange} button={props.button} link={props.link}/>
-            <Link href={props.link}>
-                <ButtonPrimaryTextInput>{props.button}</ButtonPrimaryTextInput>
-            </Link>
+            <InputButton
+                name={props.name}
+                placeholder={props.placeholder}
+                size={props.size}
+                align={props.align}
+                onChange={props.onChange}
+                button={props.button}
+                link={props.link}
+            />
+            <ButtonPrimaryTextInput link={props.link}>
+                {props.button}
+            </ButtonPrimaryTextInput>
         </Container>
     );
- }
+};
 
- export {TextInput, TextInputButton};
+export { TextInput, TextInputButton };

@@ -1,31 +1,35 @@
 {
-  "name": "devportfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "next dev"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gom-mota/devportfolio.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gom-mota/devportfolio/issues"
-  },
-  "homepage": "https://github.com/gom-mota/devportfolio#readme",
-  "dependencies": {
-    "next": "^10.0.3",
-    "next-images": "^1.6.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-icons": "^4.1.0",
-    "styled-components": "^5.2.1"
-  },
-  "devDependencies": {
-    "babel-plugin-inline-react-svg": "^1.1.2"
-  }
+    "name": "devportfolio",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gom-mota/devportfolio.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/gom-mota/devportfolio/issues"
+    },
+    "homepage": "https://github.com/gom-mota/devportfolio#readme",
+    "dependencies": {
+        "next": "^13.5.4",
+        "react": "^18.1.0",
+        "react-dom": "^18.1.0",
+        "react-icons": "^4.1.0",
+        "styled-components": "^5.2.1"
+    },
+    "devDependencies": {
+        "babel-plugin-inline-react-svg": "^1.1.2",
+        "eslint": "^8.51.0",
+        "eslint-config-next": "13.5.4"
+    }
 }
